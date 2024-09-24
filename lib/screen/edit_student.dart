@@ -131,7 +131,7 @@ class _EditStudentState extends State<EditStudent> {
 
     try {
       final response = await http.put(
-        Uri.parse('http://192.168.0.32:3000/students/${widget.studentId}'),
+        Uri.parse('https://nodeapi-puce.vercel.app/students/${widget.studentId}'),
         headers: {
           'Content-Type': 'application/json',
         },

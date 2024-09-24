@@ -131,7 +131,7 @@ class _AddStudentState extends State<AddStudent> {
     // Post/submit data to the server
     try {
       final response = await http.post(
-        Uri.parse('http://192.168.0.32:3000/students'), // Change this if using a remote server
+        Uri.parse('https://nodeapi-puce.vercel.app/students'), 
         headers: {
           'Content-Type': 'application/json',
         },

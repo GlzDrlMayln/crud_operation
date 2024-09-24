@@ -25,7 +25,7 @@ class _StudentListState extends State<StudentList> {
   Future<void> fetchStudents() async {
     try {
       final response = await http.get(
-        Uri.parse('http://192.168.0.32:3000/students'), // Your API URL
+        Uri.parse('https://nodeapi-puce.vercel.app/students'), // Your API URL
       );
 
       if (response.statusCode == 200) {
@@ -51,7 +51,7 @@ class _StudentListState extends State<StudentList> {
   Future<void> deleteStudent(String id) async {
     try {
       final response = await http.delete(
-        Uri.parse('http://192.168.0.32:3000/students/$id'), // Your API URL
+        Uri.parse('https://nodeapi-puce.vercel.app/students/$id'), // Your API URL
       );
 
       if (response.statusCode == 200) {

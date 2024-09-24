@@ -23,21 +23,22 @@ class StudentDetail extends StatelessWidget {
 
   // Function to delete the student
   Future<void> deleteStudent(BuildContext context) async {
-    try {
-      final response = await http.delete(
-        Uri.parse('http://192.168.0.32:3000/students/$studentId'), // Your API URL
-      );
+  try {
+    final response = await http.delete(
+      Uri.parse('https://nodeapi-puce.vercel.app/students/$studentId'), // Updated API URL
+    );
 
-      if (response.statusCode == 200) {
-        print('Student deleted successfully');
-        Navigator.pop(context); // Go back to the previous screen
-      } else {
-        print('Failed to delete student: ${response.body}');
-      }
-    } catch (e) {
-      print('Error: $e');
+    if (response.statusCode == 200) {
+      print('Student deleted successfully');
+      Navigator.pop(context); // Go back to the previous screen
+    } else {
+      print('Failed to delete student: ${response.body}');
     }
+  } catch (e) {
+    print('Error: $e');
   }
+}
+
 
   // Function to navigate to edit page
   void navigateToEditPage(BuildContext context) {

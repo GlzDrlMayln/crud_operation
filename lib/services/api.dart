@@ -3,7 +3,7 @@ import 'dart:convert';
 import '../models/student_model.dart'; 
 
 class ApiService {
-  final String baseUrl = 'http://192.168.0.32:3000/students'; // Your API URL
+  final String baseUrl = 'https://nodeapi-puce.vercel.app/students'; // Your API URL
 
   Future<List<Student>> fetchStudents() async {
     final response = await http.get(Uri.parse(baseUrl));
